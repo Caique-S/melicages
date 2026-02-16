@@ -1,5 +1,5 @@
 # 1. Escolhe a versão do Node.js que vamos usar (a mesma que você usa localmente)
-FROM node:18
+FROM node:20
 
 # 2. Define a pasta de trabalho dentro do container
 WORKDIR /app
@@ -13,8 +13,6 @@ RUN npm install
 # 5. Copia todo o resto do projeto para dentro do container
 COPY . .
 
-# 6. Define a porta que a API vai usar (o Back4app vai redirecionar para essa porta)
-EXPOSE 3001
 
 # 7. Comando para iniciar a aplicação quando o container rodar
 CMD ["node", "src/server.js"]
