@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expõe a porta que o Back4app espera (3000)
-EXPOSE 3000
+EXPOSE 3003
 
 # 7. Comando para iniciar a aplicação quando o container rodar
 CMD ["node", "src/server.js"]
