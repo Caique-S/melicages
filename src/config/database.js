@@ -12,8 +12,6 @@ const connectDB = async () => {
 
         const conn = await mongoose.connect(process.env.MONGODB_URI, {
             dbName: 'brj_transportes',
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
             serverSelectionTimeoutMS: 5000, // Timeout de 5 segundos
             socketTimeoutMS: 45000, // Socket timeout de 45 segundos
         });
